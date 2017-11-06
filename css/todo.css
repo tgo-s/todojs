@@ -26,7 +26,7 @@
   display: grid;
   /*align-items: center;*/
   justify-items: center;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 0.2fr 2fr 0.2fr;
   
 }
 
@@ -44,14 +44,23 @@
 
 .task-box {
   display: grid;
-  background:#f5f5f5ed;
+  background:rgba(245, 245, 245, 0.90);
+  width: 100%; /*look if there is a better solution*/
 }
 
 .task-list {
   display: grid;
   grid-auto-columns: minmax(20px, auto);
-  padding: 10px;
+  padding: 0px 10px 0px 10px;
   grid-gap: 0.4em;
+}
+.completed-list {
+  display: grid;
+  grid-auto-columns: minmax(20px, auto);
+  padding: 15px 10px 10px 10px;
+  grid-gap: 0.4em;
+  margin-top: 0;
+  border-top: rgb(221,221,221) 1px solid;
 }
 
 .task-item {
@@ -76,7 +85,7 @@
   justify-self: end;
 }
 
-.task-item >span {
+.task-item > span {
   height: 80%;
   border: #ddd 1px solid;
   align-self: center;
@@ -98,7 +107,7 @@
   background: rgb(106, 209, 185);
   border: none;
   border-radius: 5px;
-  text-indent: 5px;
+  padding: 0px 32px 0 10px;
   justify-self: stretch;
   outline: none;
   color: white;
@@ -108,15 +117,17 @@
   align-self: center;
   justify-self: stretch;
   position: relative;
-  left: -22px;
+  left: -25px;
+  top: 2.5px;
+  outline: none;
 }
 
 .btn-add-task {
   background: url('../img/icons/64px/add_4.png') no-repeat;
   background-position: center;
-  background-size: 3.2em 3.2em;
-  width: 3.2em;
-  height: 3.2em;
+  background-size: 3.6em 3.6em;
+  width: 3.6em;
+  height: 3.6em;
   border: none;
   cursor: pointer;
   outline: none;
@@ -125,7 +136,7 @@
 
 .btn-add-task:active {
   background: url('../img/icons/64px/add.png') no-repeat;
-  background-size: 3.2em 3.2em;
+  background-size: 3.6em 3.6em;
   background-position: center;
 }
 
